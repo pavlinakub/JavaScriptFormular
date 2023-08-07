@@ -69,16 +69,3 @@ window.onload = function () {
     }
   });
 };
-// pocetDetske.value = 0;
-// pocetGravel.value = 0;
-// pocetHorske.value = 0;
-// pocetSilnicni.value = 0;
-// horske.checked = false;
-// detske.checked = false;
-// silnicni.checked = false;
-// gravel.checked = false;
-// bezNosice.checked = false;
-// tazneNosic.checked = false;
-// stresniNosic.checked = false;
-// rozpocet.value = 0;
-// resume.value = 0;
