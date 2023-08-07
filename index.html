@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(./image/background.jpg);
+        padding-top: 40px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no_repeat;
+        background-size: cover;
+        color: white;
+      }
+      form {
+        background-color: hsla(0, 0%, 0%, 60%);
+        padding-left: 5rem;
+        padding-right: 5rem;
+        border-radius: 1rem;
+        min-width: 300px;
+        margin-left: 10rem;
+        margin-right: 10rem;
+        align-self: center;
+        margin-bottom: 30px;
+        max-width: 550px;
+      }
+      h1 {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+      }
+      h2 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+      }
+      h3 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        text-align: center;
+      }
+      h4 {
+        padding-bottom: 5px;
+        padding-top: 5px;
+      }
+      .druhKol {
+        padding-left: 1rem;
+      }
+      .pocetDni {
+        padding-left: 1rem;
+      }
+      input {
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-left: 5px;
+      }
+      .posli {
+        padding-top: 5px;
+        margin-bottom: 20px;
+      }
+      .calculate {
+        margin-left: 4rem;
+      }
+      input#resume {
+        width: 350px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-">
+      <div class="row">
+        <div class="col-12">
+          <form action="/index.html" name="form1">
+            <h1>BIKE RENT</h1>
+            <h2>objednavkovy formular</h2>
+            <h3>Druhy kol</h3>
+            <div class="druhKol">
+              <br />
+              <input
+                type="checkbox"
+                name=" kolo"
+                id="horske"
+                value="500"
+                checked
+              />
+              Horske kolo &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              <input
+                type="number"
+                name=" koloH"
+                id="horskePocet"
+                value=""
+                min="0"
+              />Ks
+
+              <br />
+              <input type="checkbox" name="kolo" id="silnicni" value="1500" />
+              Silnicni kolo &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+              <input
+                type="number"
+                name=" koloS"
+                id="silnicniPocet"
+                value=""
+                min="0"
+              />Ks
+
+              <br />
+              <input type="checkbox" name="kolo" id="detske" value="200" />
+              Detske kolo&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+              <input
+                type="number"
+                name=" koloD"
+                id="detskePocet"
+                value=""
+                min="0"
+              />Ks
+
+              <br />
+              <input type="checkbox" name="kolo" id="gravel" value="2500" />
+              Gravel &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp;
+              <input
+                type="number"
+                name=" koloG"
+                id="gravelPocet"
+                value=""
+                min="0"
+              />Ks
+            </div>
+            <h3>Pocet dni</h3>
+            <div class="pocetDni">
+              <select name="bikeN" id="bike">
+                <option value="1" selected>1 den</option>
+                <option value="5">5 dni</option>
+                <option value="7">7 dni</option>
+                <option value="14">14 dni</option>
+                <option value="30">30 dni</option>
+              </select>
+            </div>
+
+            <div class="nosic">
+              <h3>Je treba nosic:</h3>
+              <input type="radio" name="" value="0" id="bezNosice" />Bez nosice
+              <br />
+              <input type="radio" name="" value="0.05" id="stresni" />Cyklonosic
+              stresni (+5% z celkove ceny zapujcky navic)
+              <br />
+              <input type="radio" name="" id="tazne" value="0.1" />Cyklonosic na
+              tazne zarizani(+10% z celkove ceny zapujcky navic)
+            </div>
+            <div>
+              <h3>Cena:</h3>
+              <h4>Rozpocet:</h4>
+              <input
+                type="text"
+                id="rozpocet"
+                placeholder="Zadejte svuj rozpocet"
+              />
+              <br />
+              <br />
+              <button id="spocitej">Spocitej</button>
+
+              <button id="reset">Reset formulare</button>
+            </div>
+            <div>
+              <h4>Vypocet ceny:</h4>
+              <input type="text" name="" id="celkem" />
+              <h4>Resume:</h4>
+              <input type="text" name="" id="resume" />
+            </div>
+            <div>
+              <h2>Potvrzeni objednavky:</h2>
+              <input type="email" name="" id="emailI" />
+              <br />
+              <br />
+              <button class="posli" id="odeslat" value="Odeslani udaju">
+                Odeslat objednavku
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
