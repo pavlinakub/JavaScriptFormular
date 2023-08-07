@@ -20,14 +20,14 @@ window.onload = function () {
   const spocitej = document.getElementById("spocitej");
   const rozpocet = document.getElementById("rozpocet");
   const resume = document.getElementById("resume");
+  const reset = document.getElementById("reset");
 
-  let celkem = 0;
   let vypocet = 0;
 
   spocitej.addEventListener("click", function (event) {
     //kdyz to mas ve formu...musis vyresetovat implicitni resetovani
     event.preventDefault();
-
+    let celkem = 0;
     if (horske.checked === true) {
       celkem += Number(horske.value) * Number(pocetHorske.value);
     }
@@ -65,9 +65,20 @@ window.onload = function () {
     if (pomocna > 0) {
       resume.value = "Z rozpoctu ti zbyva:" + pomocna;
     } else if (pomocna < 0) {
-      resume.value = "Zmen objednavku o:" + Math.abs(pomocna);
+      resume.value = "Sniz objednavku o:" + Math.abs(pomocna);
     }
-
-    console.log(celkem);
   });
 };
+// pocetDetske.value = 0;
+// pocetGravel.value = 0;
+// pocetHorske.value = 0;
+// pocetSilnicni.value = 0;
+// horske.checked = false;
+// detske.checked = false;
+// silnicni.checked = false;
+// gravel.checked = false;
+// bezNosice.checked = false;
+// tazneNosic.checked = false;
+// stresniNosic.checked = false;
+// rozpocet.value = 0;
+// resume.value = 0;

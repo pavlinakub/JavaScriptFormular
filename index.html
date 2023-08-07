@@ -71,6 +71,13 @@
       input#resume {
         width: 350px;
       }
+      .cas {
+        float: left;
+      }
+      select {
+        margin-top: 10px;
+        margin-left: 10px;
+      }
     </style>
   </head>
   <body>
@@ -80,7 +87,7 @@
           <form action="/index.html" name="form1">
             <h1>BIKE RENT</h1>
             <h2>objednavkovy formular</h2>
-            <h3>Druhy kol</h3>
+            <h3>Druhy kol:</h3>
             <div class="druhKol">
               <br />
               <input
@@ -133,7 +140,7 @@
                 min="0"
               />Ks
             </div>
-            <h3>Pocet dni</h3>
+            <h3 class="cas">Pocet dni:</h3>
             <div class="pocetDni">
               <select name="bikeN" id="bike">
                 <option value="1" selected>1 den</option>
