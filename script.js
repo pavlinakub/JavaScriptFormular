@@ -20,7 +20,7 @@ window.onload = function () {
   const spocitej = document.getElementById("spocitej");
   const rozpocet = document.getElementById("rozpocet");
   const resume = document.getElementById("resume");
-  const reset = document.getElementById("reset");
+  const resetB = document.getElementById("reset");
 
   let vypocet = 0;
 
@@ -67,5 +67,20 @@ window.onload = function () {
     } else if (pomocna < 0) {
       resume.value = "Sniz objednavku o:" + Math.abs(pomocna);
     }
+  });
+  resetB.addEventListener("click", function () {
+    pocetDetske.value = 0;
+    pocetGravel.value = 0;
+    pocetHorske.value = 0;
+    pocetSilnicni.value = 0;
+    horske.checked = false;
+    detske.checked = false;
+    silnicni.checked = false;
+    gravel.checked = false;
+    bezNosice.checked = false;
+    tazneNosic.checked = false;
+    stresniNosic.checked = false;
+    rozpocet.value = 0;
+    resume.value = 0;
   });
 };
